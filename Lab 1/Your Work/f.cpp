@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Allocating memory dynamically on the heap
+    int *ptr = new int; 
+    *ptr = 500;
+
+    cout << "Dynamically allocated value: " << *ptr << endl;
+
+    // Freeing the memory to prevent memory leaks
+    delete ptr; 
+    ptr = nullptr; // Good practice: point to null after deleting
+
+    return 0;
+}
